@@ -1,0 +1,1000 @@
+   84  ip link
+   85  ip addr
+   86  iftop
+   87  yum install iftop
+   88  nc
+   89  nc  192.168.56.106 22
+   90  dig google.com
+   91  dig  192.168.56.106
+   92  nc google.com 80
+   93  nc 192.168.56.106 22
+   94  Important commands:
+   95  systemctl get-defaultsystemctl list-unitssystemctl list-dependencies
+   96  systemctl get-default
+   97  systemctl list-units
+   98  systemctl list-units|more
+   99  lsblk
+  100  swapinfo
+  101  free -m
+  102  clear
+  103  systemctl list-dependencies
+  104  systemctl list-dependencies|more
+  105  clear
+  106  cat /proc/sys/etc/sysctl.conf
+  107  cd /proc/sys/etc/sysctl.conf
+  108  cd /proc/sys
+  109  ls -lrt
+  110  cd vm 
+  111  ll
+  112  ll|more
+  113  cd ..
+  114  ls -lrt
+  115  cd
+  116  find / -name sysctl.conf
+  117  cd /etc
+  118  ll sysctl.conf
+  119  cat sysctl.conf|more
+  120  cd
+  121  sysctl -a
+  122  systemctl list-dependencies|more
+  123  systemctl list-dependencies|grep -i sysctl
+  124  systemctl list-dependencies|more
+  125  top
+  126  free -m
+  127  cd /etc/ansible/playbooks/
+  128  ll
+  129  cat mazor_report.yml
+  130  cd
+  131  mpstat
+  132  iostat
+  133  iostat -x 4
+  134  iostat -x 1
+  135  uptime
+  136  vmstat
+  137  iostatio
+  138  io
+  139  iostat
+  140  iotop
+  141  du -sh
+  142  k
+  143  du -sk
+  144  telnet 192.168.56.106 22
+  145  yum install -y telnet 
+  146  ping  192.168.56.106 
+  147  telnet 192.168.56.106 22
+  148  clear
+  149  vi /etc/systemd/system/myscript.service
+  150  init 6
+  151  leas
+  152  clear
+  153  iptable
+  154  firewall-cmd --list-all
+  155  ping -c 3 google.com
+  156  ping google.com
+  157  ping -c 10 google.com
+  158  cd /data
+  159  ls -lrt
+  160  cd temp/
+  161  ls -lrt
+  162  cd ..
+  163  cd myscripts/cbs/
+  164  cd ..
+  165  ls -lrt
+  166  vi sshd_status_check.sh
+  167  sh sshd_status_check.sh
+  168  vi sshd_status_check.sh
+  169  sh sshd_status_check.sh
+  170  vi sshd_status_check.sh
+  171  sh sshd_status_check.sh
+  172  cat sshd_status_check.sh
+  173  vi sshd_status_check.sh
+  174  sh sshd_status_check.sh
+  175  clear
+  176  import osos.system("ping -c 3 google.com")
+  177  ls -lrt
+  178  ll -type f
+  179  ls -lrtf
+  180  ls -lrt
+  181  cat find_max.sh
+  182  for i in `ll | awk '{print $NF}'`; do echo ========================= $i ============================; cat $i; echo; echo +++++++++++++++++++++++++++++++++++++++++++++++++++++++++; done
+  183  sh check_file.sh
+  184  vi ch.sh
+  185  sh ch.sh
+  186  cd
+  187  which bash
+  188  clear
+  189  journalctl -u httpd
+  190  cd /etc/ansible/playbooks/
+  191  ls -lrt
+  192  cd ../roles/
+  193  ls -lrt
+  194  ansible-playbook apache_role.yml 
+  195  journalctl -u httpd
+  196  clear
+  197  cd
+  198  clear
+  199  which ansible
+  200  systemctl -q is-active apache
+  201  systemctl -q is-active httpd
+  202  systemctl is-active httpd
+  203  cd /etc/ansible/roles/
+  204  ls -lrt
+  205  ansible-playbook apache_role.yml
+  206  cat /etc/resolv.conf
+  207  cds
+  208  cd
+  209  clear
+  210  bc
+  211  cd /etc
+  212  ls -lrt
+  213  ls -lrt|more
+  214  cd /etc/network/interfaces
+  215  cat /etc/network/interfaces
+  216  cd network
+  217  cd
+  218  nmcli con show
+  219  ifconfig
+  220  cat What is the purpose of the /etc/hostname file?
+  221  cat /etc/hostname
+  222  hostnamectl set-hostname newhostname
+  223  cat /etc/hostname
+  224  hostnamectl set-hostname LINUX
+  225  cat /etc/hostname
+  226  getenforce
+  227  setenofrce 1
+  228  setenforce 1
+  229  getenforce
+  230  journalctl -u httpd
+  231  history|grep -i debug
+  232  history|grep -i ansible
+  233  clear
+  234  pi ruote
+  235  ip route
+  236  ip a
+  237  ping  127.0.0.1
+  238  netstat -nr
+  239  ping 10.0.2.2
+  240  route -n
+  241  pvs
+  242  pwd
+  243  cd /
+  244  pwd
+  245  cd
+  246  pwd
+  247  cat /etc/exports
+  248  systemctl status nfs-server.service 
+  249  exportfs -r
+  250  exportfs -v
+  251  showmount -e
+  252  init 0
+  253  clear
+  254  sysctl -a|more
+  255  /data
+  256  cd /data
+  257  sysctl -a 2>/dev/null | sort > server1_sysctl.txt
+  258  ls -lrt
+  259  awk -F' = ' '{print $1","$2}' server1_sysctl.txt > server1.csv
+  260  awk -F' = ' '{print $1","$2}' server2_sysctl.txt > server2.csv
+  261  ls -lrt
+  262  join -t, -a1 -a2 -e "N/A" -o 0,1.2,2.2 <(sort server1.csv) <(sort server2.csv) > kernel_comparison.csv
+  263  ls -lrt
+  264  clear
+  265  df -h
+  266  cd /etc
+  267  find /etc -name *.log -size 10M -type f
+  268  find /etc -name *.log -size 1M -type f
+  269  find /etc -name *.log -size 1m -type f
+  270  find /etc -name *.log -size 1M -type f
+  271  find /etc -name *.log 
+  272  find /etc -name *log 
+  273  vmstat
+  274  mpstat
+  275  cd
+  276  netstat -tulnp
+  277  clear
+  278  cd /etc
+  279  cat passwd
+  280  cat passwd| sed -d ':'|sort -k 3
+  281  cat passwd| sed -d ':'
+  282  cat passwd| cut -d ':'
+  283  sort -k 3 passwd|cut -d ':'
+  284  sort -t: -k3 -n passwd
+  285  crontab -l
+  286  find /var -name *cron*
+  287  cat /var/log/cron-20260221
+  288  cat /etc/cron.daily
+  289  cd /etc/cron.daily
+  290  ll
+  291  cat logrotate 
+  292  cat /etc/logrotate.conf
+  293  cat /etc/logrotate.conf|grep -v "#"
+  294  ll
+  295  cd ..
+  296  cd logrotate.d/
+  297  ll
+  298  cat wtmp
+  299  cd ../..
+  300  cd /var
+  301  find /var -name *cron*
+  302  crontab -l
+  303  cat /var/log/cron-20260221|grep "health_report"
+  304  cat /var/log/cron-20260221
+  305  cat /var/log/cron-20260221|grep "health_report"
+  306  crontab -l
+  307  cat /var/log/cron-20260221
+  308  timedatectl
+  309  cd log
+  310  ls -lrt
+  311  ls -lrt|grep "cron"
+  312  tail -20f cron
+  313  ls -lrt|grep "cron"
+  314  cd /etc/ansible/playbooks/
+  315  ls -lrt
+  316  cd Health_Report/
+  317  ll
+  318  crontab -l
+  319  /usr/bin/ansible /etc/ansible/playbooks/health_report.yml
+  320  /usr/bin/ansible-playbook /etc/ansible/playbooks/health_report.yml
+  321  crontab -e
+  322  clear
+  323  bc
+  324  cd
+  325  fallocate -l 1G /swapfile
+  326  ls -lrt
+  327  cd /
+  328  ls -lrt
+  329  ls -lh /swapfile
+  330  ls -ld /swapfile
+  331  ls -lh /swapfile
+  332  ll /dev/zero
+  333  df -h /dev/zero
+  334  swapoon -a
+  335  swapon -a
+  336  swapon -show
+  337  swapon -show -h
+  338  free -m
+  339  free -h
+  340  ls -lh /swapfile
+  341  dd if=/dev/zero of=/swapfile bs=1M count=1024
+  342  free -h
+  343  clear
+  344  ulimit
+  345  su - anees
+  346  su - dell
+  347  clear
+  348  vi /etc/security/limits.conf
+  349  cat /etc/students
+  350  groupadd students
+  351  vi /etc/security/limits.conf
+  352  usermod -G students anees
+  353  su - anees
+  354  vi /etc/security/limits.conf|tail
+  355  cat /etc/security/limits.conf|tail
+  356  /etc/pam.d/login
+  357  cat /etc/pam.d/login
+  358  cat /etc/pam.d/login|grep pam_limits.so
+  359  vi /etc/pam.d/login
+  360  su - anees
+  361  cat /etc/pam.d/login |tail -3
+  362  cat /etc/security/limits.conf|tail -5
+  363  id anees
+  364  clear
+  365  uname -r
+  366  uname
+  367  emacs
+  368  svn
+  369  yum history
+  370  yum history undo 15
+  371  clear
+  372  yum history undo 15
+  373  yum history
+  374  yum history undo 14
+  375  yum history 
+  376  ls -lrt
+  377  cd /etc/ansible/playbooks/Health_Report/
+  378  ls -lrt
+  379  time
+  380  timedatectl
+  381  ls -lrt
+  382  cat Health_Report_2026-03-14.txt
+  383  crontab -e
+  384  ls -lrt
+  385  timedatectl
+  386  cd
+  387  ps -aux|grep "Z"
+  388  chronyc sources
+  389  chronyc tracking
+  390  chronyc makestep
+  391  timedatectl
+  392  fallocate -l 1G /swapfile
+  393  ls -ld /swapfile 
+  394  df -h
+  395  cd /
+  396  ls -lr
+  397  df -h
+  398  ls -lrt
+  399  df -h /
+  400  rm swapfile 
+  401  df -h /
+  402  clear
+  403  top
+  404  clea
+  405  clear
+  406  bc
+  407  su - anees
+  408  who
+  409  who | grep anees
+  410  who | grep root
+  411  w
+  412  loginctl list-sessions | grep anees
+  413  loginctl list-sessions
+  414  history
+  415  bc
+  416  clear
+  417  cd /var/log
+  418  ls -lrt
+  419  tail -500f messages
+  420  find / -name *coredump*
+  421  cat /proc/4511/coredump_filter
+  422  cd /proc/4511/coredump_filter
+  423  find / -name *coredump*
+  424  cd /proc/4518/
+  425  cd /proc/
+  426  ls -lrt
+  427  ps -ef|grep 4127
+  428  cd
+  429  yum install linux-crashdump
+  430  yum install kexec-tools
+  431  ip -s link
+  432  ethtool -S enp0s3
+  433  man ip
+  434  cd /data
+  435  ls -lrt
+  436  rsync -avz /data /tmp/data_bkp
+  437  ll tmp/data_bkp
+  438  cd /tmp
+  439  ls -lr
+  440  cd data_bkp
+  441  ls -lrt
+  442  ll
+  443  cd data
+  444  ll
+  445  cd
+  446  rsync -av /data /tmp/data_bkp
+  447  tar -cvf /data/temp/ /data/
+  448  ll /data/temp
+  449  tar -cvf /data/temp /data/
+  450  cd /data
+  451  ls -lrt
+  452  cd myscripts/
+  453  ls -lrt
+  454  cd /var/lo
+  455  cd /var/log
+  456  ls -lrt
+  457  tar -cvf cron-20260221 /data/cron-20260221.tar/gz
+  458  tar -cvf cron-20260221 /data/cron-20260221.tar.gz
+  459  pwd
+  460  cd /data
+  461  tar -cvf /var/log/cron-20260221 cron-20260221.tar.gz
+  462  ll /var/log/cron-20260221
+  463  cd /var/log
+  464  ls -lrt
+  465  tar -cvf messages-20260303
+  466  tar -cvf messages-20260303 messages-20260303.tar
+  467  tar -cvf  cron-20260221.tar.gz /var/log/cron-20260221
+  468  tar -cvf  cron-20260221.tar.gz cron-20260221
+  469  ls -lrt
+  470  ls -lrt|grep 20260221
+  471  ls -i |grep 20260221
+  472  clear
+  473  cd
+  474  bc
+  475  clear
+  476  bc
+  477  rsync -azv /data/ /tmp
+  478  cd /tmp
+  479  ls -lrt
+  480  ls -lrt|grep -i data
+  481  cd
+  482  grep -i "error" /var/log/messages
+  483  grep -Ri "error" /var/log/messages
+  484  grep -Ri "error" /var/log
+  485  ll /var/log/cron
+  486  cat /etc/logrotate.d
+  487  cd /etc/logrotate.d
+  488  ls -lrt
+  489  cd /var/log
+  490  ls -lrt
+  491  ls -lrt|grep -i cron
+  492  cd
+  493  cat /etc/sysctl.conf
+  494  ll /run/sysctl.d/
+  495  ll /usr/lib/sysctl.d/
+  496  clear
+  497  bc
+  498  yum install stress -y
+  499  stress version
+  500  stress --cpu 1 --timeout 30
+  501  stress --cpu 3 --timeout 30
+  502  stress --cpu 3 --timeout 60
+  503  stress --cpu 3 --timeout 120
+  504  clear
+  505  bc
+  506  cd /etc -name *sys*
+  507  find /etc -name *sys*
+  508  find /etc -name **
+  509  find /etc -name *sys* -size 10M
+  510  find /etc -name *sys* -size 2M
+  511  find /etc -name *sys* -size 4K
+  512  find /etc -name *sys* -size 4k
+  513  find /etc -name *sys* -size 2k
+  514  find /etc -name *sys* -size 6k
+  515  find /var/log -size 1M
+  516  find /var/log -size 10M
+  517  find /var/log -size 5M
+  518  find /var/log -size 2M
+  519  df -h
+  520  df -sh
+  521  du -sh
+  522  du -sh *|sort -l
+  523  du -sh *|sort -n
+  524  df -h
+  525  df -h|sort -k4 -n
+  526  df -h|sort -k4 
+  527  df -h|awk 'NR>1' |sort -k4 
+  528  df -h|awk 'NR>1' |sort -k5 -n
+  529  cd /data
+  530  ls -lrt
+  531  du -sh *|sort -n
+  532  free -m
+  533  vmstat
+  534  mpstat
+  535  uname -r
+  536  lscpu
+  537  lscpu|grep -i core
+  538  nproc
+  539  free -h
+  540  swapoff -a
+  541  free -h
+  542  swapon -a
+  543  free -h
+  544  iostat -1 -n
+  545  iostat -
+  546  iostat 1 10
+  547  uptime
+  548  watch iostat
+  549  top
+  550  iostat
+  551  iostat 1 10
+  552  vmstat
+  553  free -m
+  554  watch free -h
+  555  vmstat
+  556  watch vmstat
+  557  iostat
+  558  top
+  559  iostat 1 10
+  560  iostat
+  561  iostat 1 10
+  562  top
+  563  iostat 1 20
+  564  ls -lrt
+  565  cd temp/
+  566  ls -lrt
+  567  chmod 4777 mydata 
+  568  ll mydata 
+  569  cd
+  570  find / -perm 4777 
+  571  find / -perm 2777 
+  572  find / -perm 2777 2>&1
+  573  find / -perm 2777 2>1
+  574  find / -perm 2777 
+  575  find / -perm 4777 2>1
+  576  find / -perm 4777 2>&1
+  577  cd /data/tmp
+  578  cd /data/temp
+  579  ls -lrt
+  580  chmod 2777 dummy_loop.sh
+  581  ls -lrt
+  582  su - dell
+  583  chmod 700 mydata 
+  584  ls -lrt
+  585  su - anees
+  586  su - dell
+  587  ls -ld /data
+  588  cd /data
+  589  ls -lrt
+  590  getfacl temp
+  591  setfacl -m user:dell:r-x temp
+  592  ls -lrt
+  593  cd temp
+  594  ls -lrt
+  595  chmod 4700 mydata
+  596  ls -lrt
+  597  chmod +x mydata 
+  598  chmod +r mydata 
+  599  ls -lrt
+  600  cat mydata 
+  601  cat>mydata 
+  602  chmod -x mydata
+  603  ls -lrt
+  604  chmod +x mydata 
+  605  chage -l del
+  606  chage -l dell
+  607  passwd -e dell
+  608  chage -l dell
+  609  passwd dell
+  610  su - anees
+  611  cat /etc/passwd|tail -20
+  612  c
+  613  su - anees
+  614  chage -l shusheel
+  615  su - shusheel
+  616  cd /etc
+  617  ls -lrt|grep -i login
+  618  vi login.defs 
+  619  ip addr
+  620  clear
+  621  bc
+  622  su - dell
+  623  su - anees
+  624  clear
+  625  curl version
+  626  rpm -qa |grep -i curl
+  627  curl http://192.168.1.10:8080
+  628  netstat -nutlp
+  629  cd /data
+  630  ls -lrt
+  631  ln -s /data/temp /tmp/data_bkp/temp
+  632  cd /tmp/data_bkp/
+  633  ls -lrt
+  634  cd temp
+  635  ls -lrt
+  636  pwd
+  637  journalctl -u httpd
+  638  q
+  639  journalctl -u sshd
+  640  curl http://192.168.56.106:80
+  641  su - anees
+  642  vi .bashrc 
+  643  cd /etc
+  644  vi login.defs 
+  645  vi .bashrc 
+  646  cd
+  647  vi .bashrc 
+  648  ausearch -f filename
+  649  ausearch -f passwd
+  650  strace ls
+  651  strace cat /data/temp/data
+  652  strace firewall-cmd --list-all
+  653  ulimit -c
+  654  ulimit -c unlimited
+  655  ulimit -c
+  656  cat /etc/security/limits.conf|more
+  657  fsexports
+  658  history|grep -i "expor"
+  659  exportfs -v
+  660  nfsstat
+  661  exportfs -v
+  662  nfsstat
+  663  cleaR
+  664  clear
+  665  journalctl -k
+  666  journalctl -k|grep -i "panic"
+  667  journalctl -k -b -1
+  668  journalctl -b -1
+  669  journalctl -b 
+  670  journalctl -k
+  671  grep -i panic /var/log/messages
+  672  grep -i error /var/log/messages
+  673  grep -i panic /var/log/syslog
+  674  dmesg | grep -i panic
+  675  dmesg
+  676  ls /var/crash/
+  677  cd /var/crash
+  678  ls -lrt
+  679  smartctl -a /dev/sda
+  680  memtest86
+  681  rpm -qa --last | head
+  682  lsmod
+  683  history|grep -i streess
+  684  history|grep -i strees
+  685  history|grep -i stress
+  686  cd /var/log
+  687  cd audit/
+  688  ls -lrt
+  689  tail -200f audit.log
+  690  cd
+  691  firewall-cmd --list-all
+  692  firewall-cmd --permanent --remove-service=nfs
+  693  firewall-cmd --reload
+  694  firewall-cmd --list-all
+  695  firewall-cmd --permanent --remove-service=rpc-bind
+  696  firewall-cmd --reload
+  697  firewall-cmd --permanent --add-service=nfs
+  698  firewall-cmd --permanent --add-service=rpc-bind
+  699  firewall-cmd --reload
+  700  systemctl status nfs-server.service 
+  701  systemctl stop nfs-server.service 
+  702  systemctl status nfs-server.service 
+  703  systemctl start nfs-server.service 
+  704  systemctl stop nfs-server.service 
+  705  systemctl start nfs-server.service 
+  706  systemctl stop nfs-server.service 
+  707  systemctl start nfs-server.service 
+  708  cat /proc/sys/vm/swappiness
+  709  sysctl -w vm.swappiness=10
+  710  cat /proc/sys/vm/swappiness
+  711  cat /etc/sysctl.conf
+  712  grep -Ri anees /data
+  713  grep -Ri swpainess /usr/lib/sysctl.d/
+  714  grep -Ri swpainess /run/sysctl.d
+  715  grep -Ri swpainess /run/sysctl.d/
+  716  grep -Ri swpainess /etc/sysctl.d/
+  717  grep -Ri swpainess /usr/lib/sysctl.d/
+  718  grep -Ri swpaines /run/sysctl.d/
+  719  grep -Ri swpainess /run/sysctl.d/
+  720  sysctl -a|grep -i swapi
+  721  sysctl -a|grep -i swap
+  722  grep -Ri swap /run/sysctl.d/
+  723  grep -Ri swap /usr/lib/sysctl.d/
+  724  grep -Ri swap /etc/sysctl.d/
+  725  cd /etc/sysctl.d/
+  726  ls -lrt
+  727  cat /etc/sysctl.d
+  728  cat /etc/sysctl.conf 
+  729  cd /usr/lib/sysctl.d/
+  730  ls -lrt
+  731  pwd
+  732  cd /usr/lib/sysctl.d/
+  733  ls -lrt
+  734  pwd
+  735  cd /run/sysctl.d/
+  736  cd
+  737   cd /etc
+  738  ls -lrt|grep -i ctl
+  739  cd sysctl.d/
+  740  ls -lrt
+  741  cat 99-sysctl.conf 
+  742  cd
+  743  find / -name vm -type d
+  744  cd /proc/sys/vm
+  745  ls -lrt
+  746  cat swappiness
+  747  dcls -lrt
+  748  pwd
+  749  sysctl -p
+  750  ls -plrt
+  751  ls -lrt
+  752  cd
+  753  cd /data/temp/
+  754  ls -t
+  755  ls -lt
+  756  ls -lrt
+  757  clear
+  758  find / -name vm -type d
+  759  cd /data/temp/
+  760  ls -lrt
+  761  cd ../
+  762  grep -i anees temp
+  763  grep -Ri anees temp
+  764  grep -Ril anees temp
+  765  mpstat 1 10
+  766  ps 
+  767  ps -aux
+  768  top
+  769  ps -aux pid
+  770  ps -eo pid,ppid,%cpu,%mem
+  771  ps -eo pid,ppid,%cpu,%mem,cmd
+  772  ps -eo pid,ppid,%cpu,%mem,cmd --sort=-%cpu
+  773  ps -eo pid,ppid,%cpu,%mem,cmd --sort=-%cpu|head -10
+  774  ps -eo pid,ppid,%cpu,%mem,cmd --sort=-%cpu|head -10\
+  775  ps -eo pid,ppid,%cpu,%mem,cmd --sort=-%cpu|head -10
+  776  clear
+  777  uname
+  778  uname -r
+  779  lscpu
+  780  vmstat
+  781  mpstat
+  782  cd /etc/ansible/playbooks/
+  783  cd Health_Report/
+  784  ls -lrt
+  785  cat Health_Report_2026-03-15.txt
+  786  init 0
+  787  clear
+  788  history|grep -i stress
+  789  stress --cpu 1 --timeout 30
+  790  top
+  791  df -h
+  792  lsblk
+  793  bc
+  794  init 0
+  795  clear
+  796  ansible version
+  797  ansible --version
+  798  cd /data
+  799  cd /etc
+  800  cd ansible/
+  801  gi init
+  802  git init
+  803  ls -lart
+  804  git config --global user.email="anees.maurya70@gmail.com"
+  805  git config --global user.name="Anees2778"
+  806  git add .
+  807  git-log
+  808  git log
+  809  git branch
+  810  git commit -m "Initial commit - Ansible configs"
+  811  git config --global user.email "anees.maurya70@gmail.com"
+  812   git config --global user.name "Anees2778"
+  813  git config --global user.email "anees.maurya70@gmail.com"
+  814  git commit -m "Initial commit - Ansible configs"
+  815  init 0
+  816  clea
+  817  clear
+  818  cd /etc/ansible/
+  819  bc
+  820  git -v
+  821  git config --global user.email "anees.maurya70@gmail.com"
+  822   git config --global user.name "Anees2778"
+  823   git config --global user.name
+  824  git config --global user.email
+  825  git config --global
+  826   git config --global user.name "Linux"
+  827  git config --global user.email
+  828   git config --global user.name
+  829  git config --list
+  830  cd /etc/ansible/
+  831  ls -lart
+  832  cd 
+  833  cd /data
+  834  ls -lrt
+  835  cd temp
+  836  ls -lrt
+  837  cd /etc/ansible/
+  838  git status
+  839  cd playbooks/
+  840  cat>abcd.y.yml
+  841  git status
+  842  git add abcd.y.yml
+  843  git status
+  844  git log
+  845  git commit "tested a new commit
+  846  git commit "tested a new commit"
+  847  git status
+  848  git commit -m "tested a new commit"
+  849  git status
+  850  git log
+  851  cd /data
+  852  mkdir test_git
+  853  cd test_git/
+  854  git init 
+  855  ls -a
+  856  cat>file1.txt
+  857  cat>file2.txt
+  858  git add .
+  859  git commit
+  860  git commit -a
+  861  git commit -m "First commit"
+  862  git status
+  863  git log
+  864  cat > file3
+  865  cat > file4
+  866  git add file3
+  867  git log
+  868  git status
+  869  cat>>file3
+  870  cat>>file4
+  871  cat>>file2.txt 
+  872  git status
+  873  git add .
+  874  git status
+  875  git commit -m "adding file 3 and file4"
+  876  git lod
+  877  git log
+  878  cat file3
+  879  vi file1.txt 
+  880  git status
+  881  ls -lrt
+  882  git status
+  883  mv file1.txt file1
+  884  mv file2.txt file2
+  885  git status
+  886  git add .
+  887  git status
+  888  vi file1 
+  889  git status
+  890  git diff 
+  891  git diff --staged 
+  892  git diff HEAD
+  893  git status
+  894   
+  895  git add .
+  896  git commit -m "files updated and commited added"
+  897  git log
+  898  vi file1
+  899  git add .
+  900  vi file1
+  901  git diff
+  902  git diff --staged
+  903  git diff HEAD
+  904  git add .
+  905  git commit -m "added 2 more lines in file1"
+  906  git log
+  907  git log|grep -i new lines
+  908  git log|grep -i new
+  909  git log|grep -i added
+  910  git log|grep -i file1
+  911  git status
+  912  git log
+  913  git diff 835b5a 2076d6
+  914  git diff 2076d6 835b5a
+  915  git status
+  916  bc
+  917  git log
+  918  git diff 835b5a c39993
+  919  git diff c39993 835b5a 
+  920  la -lrt
+  921  ls -lrt
+  922  rm file1
+  923  git add .
+  924  git commit -m "deleted file1"
+  925  git status
+  926  git log
+  927  git diff c39993 b6d513
+  928  git diff 835b5a b6d513
+  929  cd 
+  930  cd /data
+  931  ls -lrt
+  932  mkdir git_learning
+  933  cd git_learning/
+  934  git config --list
+  935  git clone https://github.com/Anees2778/Git_repos.git
+  936  ls
+  937   cd *
+  938  ls
+  939  vi file2.html 
+  940  git status
+  941  git add .
+  942  git status
+  943  git commit -m "updated file2.html"
+  944  git status
+  945  git log
+  946  git push origin main
+  947  git config --list
+  948  git config
+  949  git config --list
+  950  git config --global user.email "linuxsystem@gmail.com"
+  951  git push origin main
+  952  git status
+  953  git push origin main
+  954  git status
+  955  clear
+  956  cd /data/
+  957  ls -lrt
+  958  cd git_learning/
+  959  ls -lrt
+  960  cd Git_repos/
+  961  ls -lrt
+  962  git status
+  963  git pull
+  964  ls
+  965  git log
+  966  git pull
+  967  git log
+  968  ls
+  969  vi file1.html 
+  970  git add .
+  971  git commit -m "updated files "
+  972  git status
+  973  cat file1.html 
+  974  git status
+  975  git log
+  976  git push origin main
+  977  git status
+  978  cat file1.html 
+  979  git pull
+  980  cat file1.html 
+  981  clear
+  982  eval $(ssh-agent -s)
+  983  ps -ef |grep 2974
+  984  kill 2974
+  985  ps -ef |grep 2974
+  986  eval $(ssh-agent -s)
+  987  cd
+  988  pwd
+  989  cd .ssh
+  990  ssh-add ~/.ssh/id_rsa
+  991  ll
+  992  cat id_rsa.pub 
+  993  cd /data/
+  994  ls -lrt
+  995  cd temp
+  996  git clone git@github.com:Anees2778/Git_repos.git
+  997  ls -lrt
+  998  rm -rf Git_repos/
+  999  ls -lrt
+ 1000  cd /data/git_learning/
+ 1001  ls -lrt
+ 1002  cd Git_repos/
+ 1003  ls -lrt
+ 1004  vi file4.html
+ 1005  git status
+ 1006  git add .
+ 1007  git status
+ 1008  git commit -m "added file 4"
+ 1009  git status
+ 1010  git push
+ 1011  git push origin main
+ 1012  clear
+ 1013  cd ..
+ 1014  rm -rf Git_repos/
+ 1015  git clone git@github.com:Anees2778/Git_repos.git
+ 1016  cd Git_repos/
+ 1017  ls -lrt
+ 1018  vi file4.html
+ 1019  git add .
+ 1020  git commit -m "added file 4"
+ 1021  git status
+ 1022  git push origin main
+ 1023  clear
+ 1024  cd /etc/ansible/
+ 1025  ls -lart
+ 1026  git push origin main
+ 1027  cd .git/
+ 1028  ls -lrt
+ 1029  cat config
+ 1030  cd /data/git_learning/Git_repos/
+ 1031  cd .git/
+ 1032  cat config 
+ 1033  cd /etc/ansible/
+ 1034  echo "# Local_system_ansible_files" >> README.md
+ 1035  git init
+ 1036  git add README.md
+ 1037  git commit -m "first commit"
+ 1038  git branch -M main
+ 1039  git remote add origin https://github.com/Anees2778/Local_system_ansible_files.git
+ 1040  git push -u origin main
+ 1041  git remote add origin git@github.com:Anees2778/Local_system_ansible_files.git
+ 1042  echo "# Local_system_ansible_files" >> README.md
+ 1043  git init
+ 1044  git add README.md
+ 1045  git commit -m "first commit"
+ 1046  git branch -M main
+ 1047  git remote add origin git@github.com:Anees2778/Local_system_ansible_files.git
+ 1048  cd .git/
+ 1049  ls -lrt
+ 1050  pwd
+ 1051  cat config 
+ 1052  vi config
+ 1053  cd ..
+ 1054  git remote add origin git@github.com:Anees2778/Local_system_ansible_files.git
+ 1055  git push -u origin main
+ 1056  ls -lrt
+ 1057  clear
+ 1058  git branch
+ 1059  cd /data
+ 1060  cd git_learning/Git_repos/
+ 1061  ls -lrt
+ 1062  diff file1.html file2.html 
+ 1063  cp file2.html abcd
+ 1064  vi abcd
+ 1065  diff file2.html abcd
+ 1066  diff abcd file2.html
+ 1067  ls
+ 1068  git status
+ 1069  git add abcd
+ 1070  git status
+ 1071  git log
+ 1072  !
+ 1073  git show 52f3e0a1f500c684f7b44662f01cdb8430981550
+ 1074  git show Head
+ 1075  git show HEAD
+ 1076  git show HEAD~1
+ 1077  git show HEAD~2
+ 1078  git show HEAD~3
+ 1079  ls
+ 1080  git annotate file2.html
+ 1081  cat file2.html
+ 1082  du -sh *|sort -n
+ 1083  history>>history_2303
